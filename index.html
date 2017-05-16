@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body ng-controller="mainCtrl">
+    <p ng-repeat = "quote in quotes track by $index">
+        <span class = 'text'>{{quote.text}}</span>
+        <span class = 'author'> --{{quote.author}}</span>
+        <button ng-click = "deleteMe(quote.text)">Delete</button>
+    </p>
     <script src="app.js"></script>
     <script src="dataService.js"></script>
     <script src="mainCtrl.js"></script>
